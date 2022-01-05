@@ -4,8 +4,6 @@
  */
 package com.park.parkinglot.ejb;
 
-package com.park.parkinglot.ejb;
-
 import com.park.parkinglot.common.CarDetails;
 import com.park.parkinglot.entity.Car;
 import java.util.ArrayList;
