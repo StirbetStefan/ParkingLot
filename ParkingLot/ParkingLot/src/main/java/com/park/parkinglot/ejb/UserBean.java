@@ -9,6 +9,7 @@ import com.park.parkinglot.common.UserDetails;
 import com.park.parkinglot.entity.Car;
 import com.park.parkinglot.entity.User;
 import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import java.util.logging.Logger;
 import javax.ejb.EJBException;
@@ -16,6 +17,7 @@ import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import sun.rmi.runtime.Log;
 
 /**
  *
@@ -40,7 +42,15 @@ public class UserBean {
          
          em.persist(user);
      }
-
+     
+     public Collection<String> findUsernames(Collection<Integer> userIds){
+         LOG.info("findUsernames");
+         List<String> usernames = (List<String>) em.createQuery("SELECT u.username FROM User u WHERE u.id IN ?1")
+                 .setParameter(1, userIds)
+                 .getResultList();
+         return usernames;
+     }
+ 
      public List<UserDetails> getAllUsers() {
         LOG.info("getAllUsers");
         try {
@@ -63,5 +73,11 @@ public class UserBean {
             }
             return detailsList;
         }
-
+    public void deleteUserById(Collection<Integer> ids) {
+        LOG.info("deleteUserByIds");
+        for(Integer id:ids){
+            User user = em.find(User.class,id);
+            em.remove(user);
+        }
+    }
 }

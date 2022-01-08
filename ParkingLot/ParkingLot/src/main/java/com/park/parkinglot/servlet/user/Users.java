@@ -5,9 +5,12 @@
 package com.park.parkinglot.servlet.user;
 
 import com.park.parkinglot.common.UserDetails;
+import com.park.parkinglot.ejb.InvoiceBean;
 import com.park.parkinglot.ejb.UserBean;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
@@ -37,6 +40,9 @@ public class Users extends HttpServlet {
      */
     @Inject
     private UserBean userBean;
+    
+    @Inject
+    InvoiceBean invoiceBean;
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**
@@ -54,7 +60,11 @@ public class Users extends HttpServlet {
 
         List<UserDetails> users= userBean.getAllUsers();
         request.setAttribute("users",users);
-
+        
+        if(!invoiceBean.getUserIds().isEmpty()){
+            Collection<String> usernames = userBean.findUsernames(invoiceBean.getUserIds());
+            request.setAttribute("invoices",usernames);
+        }
         request.getRequestDispatcher("/WEB-INF/pages/users.jsp").forward(request, response);
     }
 
@@ -66,7 +76,21 @@ public class Users extends HttpServlet {
      * @throws ServletException if a servlet-specific error occurs
      * @throws IOException if an I/O error occurs
      */
-    
+    @Override
+    protected void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+        String[] userIdsAsString = request.getParameterValues("user_ids");
+        if(userIdsAsString != null){
+            List<Integer> userIds = new ArrayList<>();
+            for(String userIdAsString : userIdsAsString){
+                userIds.add(Integer.parseInt(userIdAsString));
+            }
+            userBean.deleteUserById(userIds);
+            invoiceBean.getUserIds().addAll(userIds);
+        }
+
+        response.sendRedirect(request.getContextPath()+ "/Users");
+    }
     /**
      * Returns a short description of the servlet.
      *

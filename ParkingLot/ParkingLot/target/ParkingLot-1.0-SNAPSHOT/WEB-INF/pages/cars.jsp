@@ -11,13 +11,24 @@
 <t:pageTemplate pageTitle="Cars">
     <h1>Cars</h1>
     <form method="POST" action="${pageContext.request.contextPath}/Cars">
-        <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/AddCar" role="button">Add Car</a>
+        <a class="btn btn-primary" href="${pageContext.request.contextPath}/AddCar" role="button">Add Car</a>
         <button class="btn btn-danger" type="submit">Delete Cars</button>
-
+        <div class="row">
+            <div class="col-md-1"></div>
+            <div class="col-md-3">
+                License plate
+            </div>
+            <div class="col-md-3">
+                Parking spot
+            </div>
+            <div class="col-md-3">
+                Username
+            </div>
+        </div>
         <c:forEach var="car" items="${cars}" varStatus="status">
 
             <div class="row">
-                <div class="col-md">
+                <div class="col-md-1">
                     <input type="checkbox" name="car_ids" value="${car.id}" />
                 </div>
                 <div class="col-md-3">

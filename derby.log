@@ -1,7 +1,7 @@
-Thu Jan 06 16:00:24 EET 2022 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
+Sat Jan 08 20:40:29 EET 2022 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
 ----------------------------------------------------------------
-Thu Jan 06 16:00:31 EET 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017e-2fb0-c23f-ffffe636e1ea 
+Sat Jan 08 20:40:37 EET 2022:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017e-3afd-e57e-ffffe636e1ea 
 on database directory C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLotData with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
 Loaded from file:/C:/Users/Stefan/GlassFish_Server/javadb/lib/derby.jar
 java.vendor=Oracle Corporation
@@ -12,3 +12,9 @@ os.arch=amd64
 os.version=10.0
 derby.system.home=C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot
 Database Class Loader started - derby.database.classpath=''
+----------------------------------------------------------------
+Sat Jan 08 21:10:06 EET 2022: Shutting down Derby engine
+----------------------------------------------------------------
+Sat Jan 08 21:10:06 EET 2022:
+Shutting down instance a816c00e-017e-3afd-e57e-ffffe636e1ea on database directory C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLotData with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
+----------------------------------------------------------------
