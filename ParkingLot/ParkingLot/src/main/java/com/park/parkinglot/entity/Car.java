@@ -92,4 +92,8 @@ public class Car implements Serializable {
         return "com.park.parkinglot.entity.Car[ id=" + id + " ]";
     }
 
+    public void setPhoto(Photo photo) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
