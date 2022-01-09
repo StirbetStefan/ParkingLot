@@ -12,7 +12,7 @@
     <h1>Cars</h1>
     <form method="POST" action="${pageContext.request.contextPath}/Cars">
         <a class="btn btn-primary" href="${pageContext.request.contextPath}/AddCar" role="button">Add Car</a>
-        <button class="btn btn-danger" type="submit">Delete Cars</button>
+        <button class="btn btn-danger" href="${pageContext.request.contextPath}/DeleteCars"type="submit">Delete Cars</button>
         <div class="row">
             <div class="col-md-1"></div>
             <div class="col-md-2">
@@ -44,7 +44,7 @@
                     <img src="${pageContext.request.contextPath}/Cars/Photos?id=${car.id}" width="48" />
                 </div>
                 <div class="col-md-2">
-                    <a class="btn btn-secondary" href="${pageContext.request.contextPath}/Cars/AddPhoto?id=${car.id}" role="button">Add Photo</a>
+                    <a class="btn btn-secondary" href="${pageContext.request.contextPath}/Cars/AddPhoto?carId=${car.id}" role="button">Add Photo</a>
                 </div>
                 <div class="col-md-2">
                     <a class="btn btn-secondary" href="${pageContext.request.contextPath}/EditCar?id=${car.id}" role="button">Edit Car</a>

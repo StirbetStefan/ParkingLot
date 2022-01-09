@@ -5,6 +5,7 @@
 package com.park.parkinglot.entity;
 
 import java.io.Serializable;
+import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
@@ -12,6 +13,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
@@ -30,6 +32,9 @@ public class Car implements Serializable {
     private String licensePlate;
 
     private String parkingSpot;
+    
+    @OneToOne(mappedBy= "car", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    private Photo photo;
 
     @ManyToOne(fetch = FetchType.LAZY)
     @JoinColumn(name = "USER_KEY")
@@ -67,6 +72,10 @@ public class Car implements Serializable {
         this.id = id;
     }
 
+    public void setPhoto(Photo photo) {
+        this.photo = photo;
+    }
+
     @Override
     public int hashCode() {
         int hash = 0;
@@ -87,13 +96,15 @@ public class Car implements Serializable {
         return true;
     }
 
+    public static long getSerialVersionUID() {
+        return serialVersionUID;
+    }
+
     @Override
     public String toString() {
         return "com.park.parkinglot.entity.Car[ id=" + id + " ]";
     }
 
-    public void setPhoto(Photo photo) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+ 
 
 }

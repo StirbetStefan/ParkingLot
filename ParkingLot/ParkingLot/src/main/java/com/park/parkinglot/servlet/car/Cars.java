@@ -84,7 +84,7 @@ public class Cars extends HttpServlet {
             for(String carIdAsString : carIdsAsString){
                 carIds.add(Integer.parseInt(carIdAsString));
             }
-            carBean.deleteCarsById(carIds);
+            carBean.deleteCarsByIds(carIds);
         }
 
         response.sendRedirect(request.getContextPath()+ "/Cars");

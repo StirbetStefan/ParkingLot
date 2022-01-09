@@ -66,7 +66,7 @@ public class AddPhoto extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        Integer carId = Integer.parseInt(request.getParameter("id"));
+        Integer carId = Integer.parseInt(request.getParameter("carId"));
         CarDetails car = carBean.findById(carId);
         request.setAttribute("car",car);
         request.getRequestDispatcher("/WEB-INF/pages/addPhoto.jsp").forward(request, response);
@@ -93,7 +93,7 @@ public class AddPhoto extends HttpServlet {
         filePart.getInputStream().read(fileContent);
         
         carBean.addPhotoToCar(carId, fileName, fileType, fileContent);
-        response.sendRedirect(request.getContextPath() + "/Cars/AddPhoto");
+        response.sendRedirect(request.getContextPath() + "/Cars");
     }
 
     /**

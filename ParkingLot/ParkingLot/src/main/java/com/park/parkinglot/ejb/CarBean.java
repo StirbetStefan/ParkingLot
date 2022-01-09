@@ -105,7 +105,11 @@ public class CarBean {
         return new PhotoDetails(photo.getId(),photo.getFileName(),photo.getFileType(),photo.getFileContent());
     }
 
-    public void deleteCarsById(List<Integer> carIds) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+   public void deleteCarsByIds(Collection<Integer> ids) {
+       LOG.info("deleteCarsByIds");
+       for(Integer id:ids){
+           Car car=em.find(Car.class,id);
+           em.remove(car);
+       }
     }
 }
