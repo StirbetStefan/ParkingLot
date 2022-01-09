@@ -1,8 +1,11 @@
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\servlet\car\AddCar.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\servlet\Logout.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\servlet\Login.java
+C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\servlet\Photos.java
+C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\common\PhotoDetails.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\entity\Car.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\services\UserFacadeREST.java
+C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\servlet\AddPhoto.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\servlet\car\Cars.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\servlet\user\AddUser.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\common\UserDetails.java
@@ -13,6 +16,7 @@ C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\m
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\ejb\InvoiceBean.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\entity\User.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\servlet\user\Users.java
+C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\entity\Photo.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\common\CarDetails.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\ejb\CarBean.java
 C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLot\ParkingLot\src\main\java\com\park\parkinglot\services\AbstractFacade.java

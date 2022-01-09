@@ -8,7 +8,6 @@ import com.park.parkinglot.common.UserDetails;
 import com.park.parkinglot.ejb.InvoiceBean;
 import com.park.parkinglot.ejb.UserBean;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
@@ -85,7 +84,6 @@ public class Users extends HttpServlet {
             for(String userIdAsString : userIdsAsString){
                 userIds.add(Integer.parseInt(userIdAsString));
             }
-            userBean.deleteUserById(userIds);
             invoiceBean.getUserIds().addAll(userIds);
         }
 

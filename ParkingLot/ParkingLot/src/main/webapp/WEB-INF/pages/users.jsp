@@ -14,7 +14,6 @@
     <u:if test="${pageContext.request.isUserInRole('AdminRole')}">
         <a class="btn btn-primary " href="${pageContext.request.contextPath}/AddUser" role="button">Add User</a>
         <button class="btn btn-secondary" type="submit">Invoice</button>
-        <button class="btn btn-danger" type="submit">Delete User</button>
     </u:if>
         <div class="row">
             <div class="col-md-1"></div>

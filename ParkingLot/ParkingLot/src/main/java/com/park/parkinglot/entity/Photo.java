@@ -22,75 +22,49 @@ import javax.persistence.OneToOne;
 @Entity
 public class Photo implements Serializable {
 
-    public static long getSerialVersionUID() {
-        return serialVersionUID;
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private Integer id;
+
+    private String fileName;
+    private String fileType;
+    private byte[] fileContent;
+    @OneToOne
+    @JoinColumn(name="CAR_KEY")
+    private Car car;
+
+    public String getFileName() {
+        return fileName;
     }
 
-    public String getFilename() {
-        return fileName;
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
 
     public String getFileType() {
         return fileType;
     }
 
-    public byte[] getFileContent() {
-        return fileContent;
-    }
-
-    public Car getCar() {
-        return car;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public Photo getPhoto() {
-        return photo;
-    }
-    public void setFilename(String filename) {
-        this.fileName = filename;
-    }
-
     public void setFileType(String fileType) {
         this.fileType = fileType;
+    }
+
+    public byte[] getFileContent() {
+        return fileContent;
     }
 
     public void setFileContent(byte[] fileContent) {
         this.fileContent = fileContent;
     }
 
+    public Car getCar() {
+        return car;
+    }
+
     public void setCar(Car car) {
         this.car = car;
     }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public void setPhoto(Photo photo) {
-        this.photo = photo;
-    }
-    private static final long serialVersionUID = 1L;
-    
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Integer id;
-    private String fileName;
-    private String fileType;
-    private byte[] fileContent;
-    
-    @OneToOne
-    @JoinColumn(name = "CAR_KEY")
-    private Car car;
-    
-    @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "USER_KEY")
-    private User user;
-    
-    @OneToOne(mappedBy="car", cascade=CascadeType.ALL, fetch=FetchType.LAZY)
-    private Photo photo;
 
     public Integer getId() {
         return id;
@@ -125,8 +99,4 @@ public class Photo implements Serializable {
         return "com.park.parkinglot.entity.Photo[ id=" + id + " ]";
     }
 
-    public String getFileName() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-    
 }

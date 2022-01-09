@@ -10,25 +10,51 @@ import java.io.Serializable;
  *
  * @author Stefan
  */
-public class PhotoDetails implements Serializable{
-    
+public class PhotoDetails implements Serializable {
+
     private Integer id;
     private String fileName;
     private String fileType;
     private byte[] fileContent;
-    
-    public PhotoDetails(Integer id, String fileName, String fileType, byte[] fileContent){
-        this.id=id;
+
+    public PhotoDetails(Integer id, String fileName, String fileType, byte[] fileContent) {
+        this.id = id;
         this.fileName = fileName;
         this.fileType = fileType;
         this.fileContent = fileContent;
     }
 
-    public String getFileType() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setId(Integer id) {
+        this.id = id;
     }
 
-    public int getFileContent() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    public void setFileName(String fileName) {
+        this.fileName = fileName;
     }
+
+    public void setFileType(String fileType) {
+        this.fileType = fileType;
+    }
+
+    public void setFileContent(byte[] fileContent) {
+        this.fileContent = fileContent;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public String getFileName() {
+        return fileName;
+    }
+
+    public String getFileType() {
+        return fileType;
+    }
+
+    public byte[] getFileContent() {
+        return fileContent;
+    }
+
+
 }
