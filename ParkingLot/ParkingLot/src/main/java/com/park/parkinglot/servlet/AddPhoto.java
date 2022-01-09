@@ -69,7 +69,7 @@ public class AddPhoto extends HttpServlet {
         Integer carId = Integer.parseInt(request.getParameter("id"));
         CarDetails car = carBean.findById(carId);
         request.setAttribute("car",car);
-        request.getRequestDispatcher("WEB-INF/pages/car/addPhoto.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/pages/addPhoto.jsp").forward(request, response);
     }
 
     /**
@@ -93,7 +93,7 @@ public class AddPhoto extends HttpServlet {
         filePart.getInputStream().read(fileContent);
         
         carBean.addPhotoToCar(carId, fileName, fileType, fileContent);
-        response.sendRedirect(request.getContextPath() + "/Cars");
+        response.sendRedirect(request.getContextPath() + "/Cars/AddPhoto");
     }
 
     /**

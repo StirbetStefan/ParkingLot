@@ -7,7 +7,6 @@ package com.park.parkinglot.servlet;
 import com.park.parkinglot.common.PhotoDetails;
 import com.park.parkinglot.ejb.CarBean;
 import java.io.IOException;
-import java.io.PrintWriter;
 import javax.inject.Inject;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;

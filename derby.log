@@ -1,14 +1,2 @@
-Sun Jan 09 18:19:06 EET 2022 : Apache Derby Network Server - 10.14.2.0 - (1828579) started and ready to accept connections on port 1527
-----------------------------------------------------------------
-Sun Jan 09 18:19:06 EET 2022:
-Booting Derby version The Apache Software Foundation - Apache Derby - 10.14.2.0 - (1828579): instance a816c00e-017e-3fa2-d026-ffffe636e1ea 
-on database directory C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot\ParkingLotData with class loader sun.misc.Launcher$AppClassLoader@1d44bcfa 
-Loaded from file:/C:/Users/Stefan/GlassFish_Server/javadb/lib/derby.jar
-java.vendor=Oracle Corporation
-java.runtime.version=1.8.0_202-b08
-user.dir=C:\Users\Stefan\GlassFish_Server\javadb
-os.name=Windows 10
-os.arch=amd64
-os.version=10.0
-derby.system.home=C:\Users\Stefan\OneDrive\Documents\GitHub\ParkingLot
-Database Class Loader started - derby.database.classpath=''
+Sun Jan 09 21:34:32 EET 2022 : Could not listen on port 1527 on host localhost:
+ java.net.BindException: Address already in use: JVM_Bind
